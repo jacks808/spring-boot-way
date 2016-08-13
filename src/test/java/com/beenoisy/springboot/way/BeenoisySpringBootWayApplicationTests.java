@@ -1,4 +1,4 @@
-package com.beenoisy.springboot.way01;
+package com.beenoisy.springboot.way;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class BeenoisySpringBootWay01ApplicationTests {
+public class BeenoisySpringBootWayApplicationTests {
 
 	@Test
 	public void contextLoads() {
