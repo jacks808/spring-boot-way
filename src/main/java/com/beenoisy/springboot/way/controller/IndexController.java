@@ -1,15 +1,28 @@
 package com.beenoisy.springboot.way.controller;
 
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by BeeNoisy on 16/8/13.
  */
-@RestController //1
+@RestController
 public class IndexController {
-    @RequestMapping(value = "/") // 2
-    public String index() {
-        return "Hello Spring boot"; // 3
+    @RequestMapping(value = "/")
+    public void index(
+            HttpServletRequest request, //1
+            HttpServletResponse response // 2
+    ) throws IOException {
+        String ua = request.getHeader("User-Agent");// 3
+
+        PrintWriter writer = response.getWriter(); // 4
+        writer.write("Hello Spring boot, your user agetn is : " + ua); // 5
+
+        writer.flush();// 6
     }
 }
