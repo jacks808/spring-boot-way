@@ -6,7 +6,7 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * Created by wangziyi@didichuxing.com on 16/9/15.
+ * Created by jacks808@163.com on 16/9/15.
  */
 @Configuration
 public class ConvertConfig extends WebMvcConfigurerAdapter {
